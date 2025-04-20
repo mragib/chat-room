@@ -1,0 +1,47 @@
+@token=vafds
+@base_url=https://chat-api-vecx.onrender.com/api
+
+### Create a user ###
+POST {{base_url}}/auth/register
+Content-Type: application/json
+
+{
+    "username":"ragib",
+    "password":"123456789"
+}
+
+### Create a user ###
+POST {{base_url}}/auth/register
+Content-Type: application/json
+
+{
+    "username":"diner",
+    "password":"123456789"
+}
+
+### Login ###
+POST {{base_url}}/auth/login
+Content-Type: application/json
+
+{
+    "username":"ragib",
+    "password":"123456"
+}
+
+
+
+### Create a chat ###
+
+POST {{base_url}}/chats
+Content-Type: application/json
+
+ {
+
+  "name": "test",
+  "participants":["078c8565-d58c-458e-adbb-fd74b4a57534","96393661-c8ca-4fc1-85bc-1db633e3d229"],
+
+  "createdBy":"96393661-c8ca-4fc1-85bc-1db633e3d229" 
+
+}
+### Get all chats ###
+GET {{base_url}}/user
